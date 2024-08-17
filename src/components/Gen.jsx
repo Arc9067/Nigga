@@ -29,10 +29,15 @@ function Gen() {
 
         <div
           id="certificateimg"
-          className="mt-16 relative h-auto w-auto flex justify-center items-center pointer-events-none"
+          className="mt-16 relative flex justify-center items-center pointer-events-none"
+          style={{ width: "100%", maxWidth: "400px", height: "auto" }} // Ensures the container fits on mobile
         >
-          <img src={cert} alt="Certificate" className="h-[300px] lg:h-auto" />
-          <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[320px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
+          <img
+            src={cert}
+            alt="Certificate"
+            className="w-full max-w-[400px] h-auto object-cover" // Fixed width with responsive adjustments
+          />
+          <h1 className="font-mono absolute top-[50%] text-2xl lg:top-[50%] inline text-[#6D6D6D] lg:text-4xl text-center capitalize transform -translate-y-1/">
             {name}
           </h1>
         </div>
