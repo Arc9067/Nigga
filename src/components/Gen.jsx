@@ -29,7 +29,7 @@ function Gen() {
 
         <div
           id="certificateimg"
-          className="mt-16 relative h-auto w-auto flex justify-center items-center pointer-events-none"
+          className="mt-16 relative w-full flex justify-center items-center pointer-events-none"
         >
           <img src={cert} alt="Certificate" className="h-[300px] lg:h-auto" />
           <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[320px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
