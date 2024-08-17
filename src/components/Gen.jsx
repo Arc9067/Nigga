@@ -7,7 +7,7 @@ function Gen() {
 
   const handleChange = (event) => {
     const inputValue = event.target.value;
-    setName(inputValue === "" ? "Rich Nigga" : inputValue);
+    setName(inputValue === "" ? "Cool Nigga" : inputValue);
   };
 
   const downloadImage = () => {
@@ -29,15 +29,10 @@ function Gen() {
 
         <div
           id="certificateimg"
-          className="mt-16 relative flex justify-center items-center pointer-events-none"
-          style={{ width: "100%", maxWidth: "400px", height: "auto" }} // Ensures the container fits on mobile
+          className="mt-16 relative h-auto w-auto flex justify-center items-center pointer-events-none"
         >
-          <img
-            src={cert}
-            alt="Certificate"
-            className="w-full max-w-[400px] h-auto object-cover" // Fixed width with responsive adjustments
-          />
-          <h1 className="font-mono absolute top-[50%] text-2xl lg:top-[50%] inline text-[#6D6D6D] lg:text-4xl text-center capitalize transform -translate-y-1/">
+          <img src={cert} alt="Certificate" className="h-[300px] lg:h-auto" />
+          <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[320px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
             {name}
           </h1>
         </div>
@@ -46,7 +41,7 @@ function Gen() {
           <input
             className="bg-transparent outline outline-[#D9D9D9] py-3 px-7 font-MonoSans rounded-md focus:outline-[#D9D9D9] border-none"
             placeholder="Enter your name"
-            value={name === "Rich Nigga" ? "" : name}
+            value={name === "Cool Nigga" ? "" : name}
             onChange={handleChange}
           />
 
