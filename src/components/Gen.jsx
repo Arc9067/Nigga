@@ -40,7 +40,7 @@ function Gen() {
         <div classname="mt-28 w-full">
           <div
             id="certificateimg"
-            className="mt-28 h-[354.46px] w-[454.89px] mx-auto flex justify-center items-center"
+            className="mt-28 h-[554.46px] w-[654.89px] mx-auto flex justify-center items-center"
           >
             <h1 className="font-mono  text-2xl inline text-[#6D6D6D] lg:text-5xl text-center capitalize relative top-11 lg:top-7">
               {name}
