@@ -30,7 +30,6 @@ function Gen() {
     });
   };
 
-
   return (
     <section id="gen" className="py-12 w-full">
       <div className="container flex justify-center items-center flex-col">
@@ -41,18 +40,11 @@ function Gen() {
         <div classname="mt-28 w-full">
           <div
             id="certificateimg"
-            className="mt-28 w-full max-w-[400px] mx-auto"
+            className="mt-28 h-[354.46px] w-[454.89px] mx-auto flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[400px] h-auto flex justify-center items-center pointer-events-none">
-              <img
-                src={cert}
-                alt="Certificate"
-                className="w-full max-w-[400px] h-auto object-cover"
-              />
-              <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[140px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
-                {name}
-              </h1>
-            </div>
+            <h1 className="font-mono  text-2xl inline text-[#6D6D6D] lg:text-5xl text-center capitalize relative top-11 lg:top-7">
+              {name}
+            </h1>
           </div>
         </div>
 
