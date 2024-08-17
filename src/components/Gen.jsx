@@ -12,13 +12,24 @@ function Gen() {
 
   const downloadImage = () => {
     const element = document.getElementById("certificateimg");
-    html2canvas(element).then((canvas) => {
+
+    // Set the canvas size based on the element size
+    const canvasWidth = element.scrollWidth; // Use scrollWidth for full content width
+    const canvasHeight = element.scrollHeight; // Use scrollHeight for full content height
+
+    html2canvas(element, {
+      width: canvasWidth,
+      height: canvasHeight,
+      scale: 3, // Increase the scale for higher resolution
+      useCORS: true, // Ensure CORS is handled for external images
+    }).then((canvas) => {
       const link = document.createElement("a");
       link.download = `${name}-certificate.png`;
       link.href = canvas.toDataURL("image/png");
       link.click();
     });
   };
+
 
   return (
     <section id="gen" className="py-12 w-full">
@@ -28,15 +39,20 @@ function Gen() {
         </div>
 
         <div classname="mt-28 w-full">
-          <div id="certificateimg" className="relative h-[350px] w-[600px] flex justify-center items-center pointer-events-none">
-            <img
-              src={cert}
-              alt="Certificate"
-              className="h-[350px] w-[600px] lobject-cover"
-            />
-            <h1 className="font-mono absolute top-[200px] text-2xl lg:top-[185px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
-              {name}
-            </h1>
+          <div
+            id="certificateimg"
+            className="mt-28 w-full max-w-[400px] mx-auto"
+          >
+            <div className="relative w-full max-w-[400px] h-auto flex justify-center items-center pointer-events-none">
+              <img
+                src={cert}
+                alt="Certificate"
+                className="w-full max-w-[400px] h-auto object-cover"
+              />
+              <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[140px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
+                {name}
+              </h1>
+            </div>
           </div>
         </div>
 
