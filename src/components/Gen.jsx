@@ -27,14 +27,13 @@ function Gen() {
           Claim your certificate
         </div>
 
-        <div
-          id="certificateimg"
-          className="mt-16 relative w-full flex justify-center items-center pointer-events-none"
-        >
-          <img src={cert} alt="Certificate" className="h-[300px] lg:h-auto" />
-          <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[320px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
-            {name}
-          </h1>
+        <div id="certificateimg"mt-16 >
+          <div className="relative w-full flex justify-center items-center pointer-events-none">
+            <img src={cert} alt="Certificate" className="h-[300px] lg:h-auto" />
+            <h1 className="font-mono absolute top-[160px] text-2xl lg:top-[320px] inline text-[#6D6D6D] lg:text-6xl text-center capitalize">
+              {name}
+            </h1>
+          </div>
         </div>
 
         <div className="mt-12 flex flex-col justify-center items-center gap-8">
