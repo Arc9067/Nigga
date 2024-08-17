@@ -20,7 +20,7 @@ function Gen() {
     html2canvas(element, {
       width: canvasWidth,
       height: canvasHeight,
-      scale: 1, // Increase the scale for higher resolution
+      scale: 2, // Increase the scale for higher resolution
       useCORS: true, // Ensure CORS is handled for external images
     }).then((canvas) => {
       const link = document.createElement("a");
